@@ -1,9 +1,21 @@
+@font-face {
+    font-family: "rb bold";
+    src: url("../assets/fonts/ArbFONTS-riyad-bank-Bold.ttf");
+}
+
+@font-face {
+    font-family: "rb regular";
+    src: url("../assets/fonts/ArbFONTS-riyad-bank-Regular.ttf");
+}
+
 // Body
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'rb regular', "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Bootstrap Customization
+$border-radius: 0;
+$primary: #284b63;
