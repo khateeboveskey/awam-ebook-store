@@ -11,4 +11,8 @@ return [
     'logout' => 'Logout',
     'name' => 'Name',
     'confirmPassword' => 'Confirm Password',
+    "categories" => "Categories",
+    "authors" => "Authors",
+    "reviews" => "Reviews",
+    'home' => 'Home',
 ];

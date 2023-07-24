@@ -11,5 +11,8 @@ return [
     'logout' => 'تسجيل الخروج',
     'name' => 'الاسم',
     'confirmPassword' => 'تأكيد كلمة المرور',
-
+    "categories" => "التصنيفات",
+    "authors" => "الكتّاب",
+    "reviews" => "المراجعات",
+    'home' => 'الرئيسية',
 ];

@@ -1,0 +1,7 @@
+[type="password"] {
+    &::after {
+        display: block;
+        content: "";
+        background-image: url("/resources/assets/icons/eye-outline.svg");
+    }
+}

@@ -8,18 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ __('app.appName') }}</title>
+    <title>@yield('title', __('app.appName'))</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- RTL Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
-    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
-
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -39,13 +35,17 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-link"><a>{{ __('app.categories') }}</a></li>
+                        <li class="nav-link"><a>{{ __('app.authors') }}</a></li>
+                        <li class="nav-link"><a>{{ __('app.reviews') }}</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav align-items-center">
+                        <a
+                            href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale() === 'en' ? 'ar' : 'en') }}">
+                            {{ LaravelLocalization::getCurrentLocale() === 'en' ? 'ع' : 'E' }}</a>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
