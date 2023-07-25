@@ -35,7 +35,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-link"><a>{{ __('app.categories') }}</a></li>
                         <li class="nav-link"><a>{{ __('app.authors') }}</a></li>
                         <li class="nav-link"><a>{{ __('app.reviews') }}</a></li>
@@ -43,9 +43,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav align-items-center">
-                        <a
-                            href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale() === 'en' ? 'ar' : 'en') }}">
-                            {{ LaravelLocalization::getCurrentLocale() === 'en' ? 'ع' : 'E' }}</a>
+                        <a class="nav-link"
+                            href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale() === 'en' ? 'ar' : 'en') }}"><img
+                                src="{{ Vite::asset('resources/assets/icons/language-svgrepo-com.svg') }}"
+                                alt="toggle language"></a>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
